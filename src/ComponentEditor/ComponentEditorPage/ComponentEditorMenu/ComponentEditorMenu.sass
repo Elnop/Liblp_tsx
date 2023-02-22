@@ -1,0 +1,46 @@
+.component-editor__menu
+	box-sizing: border-box
+	display: inline-flex
+	flex-direction: column
+	width: 25%
+	height: 85%
+	vertical-align: top
+	margin: 0 2.5%
+	overflow-y: auto
+	background: white
+	section
+		box-sizing: border-box
+		width: 100%
+		h2, h3
+			width: 100%
+			padding: 10px 0
+			background-color: black
+			color: white
+			text-align: center
+			font-size: 40px
+			position: relative
+.component-editor__menu-section
+	box-sizing: border-box
+	height: fit-content
+.component-editor__menu-btns-container
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	padding: 20px 0
+	overflow-y: auto
+	height: fit-content
+	max-height: 60%
+	width: 100%
+	background-color: rgba(0,0,0,0.9)
+	border-bottom: 5px solid #AAA
+.component-editor__modifier-btn
+	flex: 1
+	color: white
+	margin: 10px
+	border: solid 2.5px white
+	font-size: 35px
+	transition-duration: 200ms
+	padding: 10px 15px
+	&--active
+		color: black
+		background-color: white

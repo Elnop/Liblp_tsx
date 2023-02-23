@@ -1,5 +1,5 @@
 import "./ComponentEditor.sass"
-import { FC, MouseEventHandler, useEffect, useRef, useState, useContext } from 'react';
+import { FC, MouseEventHandler, useEffect, useRef, useState, useContext, MouseEvent } from 'react';
 import BurgerButton from './BurgerButton/BurgerButton';
 import { P_ComponentEditor } from './ComponentEditor.type'
 import { getComponentProps } from "./scripts/getComponentProps";
@@ -34,11 +34,6 @@ const ComponentEditor: FC<P_ComponentEditor> = ({ Component, componentProps, pro
 		setIsOpen(true)
 		document.body.style.overflow = 'hidden'
 	}
-	const onClickCloseHandler: MouseEventHandler= (e) => {
-		e.preventDefault()
-		setIsOpen(false)
-		document.body.style.overflow = 'auto'
-	}
 	useEffect(() => {
 		if (contextValue.elements) {
 			editElems(componentEditorRenderRef.current, contextValue)
@@ -58,7 +53,7 @@ const ComponentEditor: FC<P_ComponentEditor> = ({ Component, componentProps, pro
 				<BurgerButton className="component-editor__open-btn" onClick={onClickOpenHandler}/>
 				{
 					(isOpen) ? (
-						<ComponentEditorPage onClickCloseHandler={onClickCloseHandler} Component={Component}/>
+						<ComponentEditorPage setIsOpen={setIsOpen} Component={Component}/>
 					) : (<></>)
 				}
 			</div>

@@ -1,7 +1,7 @@
-import { MouseEventHandler } from 'react';
+import { Dispatch, MouseEvent, MouseEventHandler } from 'react';
 
 type P_ComponentEditorPage = {
-	onClickCloseHandler: MouseEventHandler
+	setIsOpen: Dispatch<boolean>
 	Component: (props: any) => JSX.Element | null
 }
 

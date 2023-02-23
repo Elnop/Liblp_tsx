@@ -18,9 +18,9 @@ const PropsSection = () => {
 			editorState.setProps([...editorState.props])
 	}
 	return (
-	<section className="component-editor__menu-section">
-		<h2 onClick={onClickTitleHandler}>Modifiers</h2>
-		<div className="component-editor__menu-btns-container" style={(!isOpen) ? {height: 0, padding: 0} : {}}>
+	<section className={(!isOpen) ? "component-editor__menu-section component-editor__menu-section--deployed" : "component-editor__menu-section"}>
+		<h2 onClick={onClickTitleHandler}>Options</h2>
+		<div className="component-editor__menu-btns-container">
 		{
 			editorState.props.map((propOption, index) => {
 				return (

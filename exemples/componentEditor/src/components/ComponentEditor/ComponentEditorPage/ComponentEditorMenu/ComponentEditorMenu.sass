@@ -1,46 +1,55 @@
+@import "../sassStyle/_theme"
+
 .component-editor__menu
 	box-sizing: border-box
 	display: inline-flex
 	flex-direction: column
-	width: 25%
-	height: 85%
+	width: 15%
+	height: 92%
 	vertical-align: top
-	margin: 0 2.5%
 	overflow-y: auto
-	background: white
-	section
-		box-sizing: border-box
-		width: 100%
-		h2, h3
-			width: 100%
-			padding: 10px 0
-			background-color: black
-			color: white
-			text-align: center
-			font-size: 40px
-			position: relative
 .component-editor__menu-section
 	box-sizing: border-box
-	height: fit-content
+	width: 100%
+	h2
+		cursor: pointer
+		width: 100%
+		color: $color_2
+		text-indent: 10%
+		font-size: 1.5rem
+		position: relative
+		border-bottom: 2px solid
+		padding: 10px 0
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+	&--deployed
+		h2
+			color: $color_1
+			background-color: $color_2
+		.component-editor__menu-btns-container
+			border-bottom: 2px solid $color_2
+			height: fit-content
 .component-editor__menu-btns-container
+	box-sizing: border-box
 	display: flex
 	flex-flow: row wrap
 	justify-content: space-between
-	padding: 20px 0
+	align-items: center
 	overflow-y: auto
-	height: fit-content
-	max-height: 60%
 	width: 100%
-	background-color: rgba(0,0,0,0.9)
-	border-bottom: 5px solid #AAA
+	height: 0
+	padding: 0
 .component-editor__modifier-btn
-	flex: 1
-	color: white
+	cursor: pointer
 	margin: 10px
-	border: solid 2.5px white
-	font-size: 35px
+	line-break: none
+	flex: auto
+	color: $color_2
+	border: 2px solid
+	font-size: 1rem
 	transition-duration: 200ms
-	padding: 10px 15px
+	padding: 10px 
+	border-radius: 20px
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 	&--active
-		color: black
-		background-color: white
+		color: $color_1
+		background-color: $color_2

@@ -6,14 +6,12 @@ import "./ComponentEditorPage.sass"
 
 const ComponentEditorPage = ({onClickCloseHandler}: P_ComponentEditorPage) => {
 	return (
-		<div className="component-editor_page-blur-bg">
-			<div className="component-editor__page">
-				<nav className="component-editor__navbar">
-					<CrossButton className="component-editor__close-btn" onClick={onClickCloseHandler}/>
-				</nav>
-				<ComponentEditorPreview/>
-				<ComponentEditorMenu/>
-			</div>
+		<div className="component-editor__page">
+			<nav className="component-editor__navbar">
+				<CrossButton className="component-editor__close-btn" onClick={onClickCloseHandler}/>
+			</nav>
+			<ComponentEditorPreview/>
+			<ComponentEditorMenu/>
 		</div>
 	)
 }

@@ -8,9 +8,9 @@ const ElemSection: FC<P_ElemSection> = ({name, options, onClick}) => {
 		e.preventDefault()
 		setIsOpen(!isOpen)
 	}
-	return (<section>
-		<h3 onClick={onClickTitleHandler}>{name}</h3>
-		<div className="component-editor__menu-btns-container" style={(!isOpen) ? {height: 0, padding: 0} : {}}>
+	return (<section className={(!isOpen) ? "component-editor__menu-section component-editor__menu-section--deployed" : "component-editor__menu-section" }>
+		<h2 onClick={onClickTitleHandler}>{name}</h2>
+		<div className="component-editor__menu-btns-container">
 		{
 			options.map((childEditOption, index) => {
 				return (<button
@@ -49,7 +49,7 @@ const ElemsSections = () => {
 		}
 	}
 	return (
-	<section className="component-editor__menu-section">
+	<>
 	{
 		editorState.elements.map((childrensStates, nameKey) => { 
 			{
@@ -59,7 +59,7 @@ const ElemsSections = () => {
 			}
 		})
 	}
-	</section>
+	</>
 	)
 }
 

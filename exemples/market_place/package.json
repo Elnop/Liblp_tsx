@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "webpack serve --mode development --stats-error-details",
     "build": "webpack -p",
-    "start": "npm run dev",
-    "test": "karma start"
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -32,11 +31,6 @@
     "css-loader": "^6.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
-    "jasmine-core": "^4.5.0",
-    "karma": "^6.4.1",
-    "karma-chrome-launcher": "^3.1.1",
-    "karma-jasmine": "^5.1.0",
-    "karma-webpack": "^5.0.0",
     "regenerator-runtime": "^0.13.11",
     "sass": "^1.38.1",
     "sass-loader": "^12.1.0",
